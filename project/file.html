@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;  
+    }
+    html,body {
+        font-family: sans-serif;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+    }
+    .main-div {
+        background-color: violet;
+        padding: 3rem;
+        width: 700px;
+    }
+    .tabs {
+        display: flex;
+    }
+    .tab {
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        border: 2px solid springgreen;
+        transition: background 300ms;
+    }
+    .tab:hover {
+        background-color: tan;
+    }
+    .tab:nth-child(1) {
+        border-radius: 25px 0 0 25px;
+    }
+    .tab:nth-child(2) {
+        border-radius: 0 25px 25px 0;
+    }
+    .active {
+        background-color: tomato;
+    }
+    .form-div {
+        display: none;
+    }
+    .current {
+        display: block;
+    }
+    .input {
+        padding: .5rem 1rem;
+    }
+    .input label {
+        padding: 0.3rem 0.6rem;
+        font-size: 1.3rem;
+        color: #fff;
+    }
+    .req {
+        color: tomato;
+    }
+    .input input {
+        width: 100%;
+        padding: 0.3rem;
+        font-size: 1.3rem;
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        outline: 0;
+    }
+    .input input:focus {
+        border: 1px solid springgreen;
+    }
+    .form-submit {
+        padding: .5rem 1rem;
+    }
+    .form-submit input {
+        padding: 1rem;
+        width: 100%;
+        font-size: 1.5rem;
+        background-color: teal;
+        border: none;
+        color: blue;
+    }
+</style>
+<body>
+    <div class="main-div">
+        <div class="tabs">
+            <div class="tab login active">hhjj</div>
+            <div class="tab sign">khbh</div>
+        </div>
+        <div class="form-div current" data-form="login">
+            <form action="">
+                <div class="input">
+                    <label for="username">user</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="input">
+                    <label for="password">password</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="password">
+                </div>
+            </form>
+        </div>
+        <div class="form-div" data-form="sign">
+            <form action="">
+                <div class="inline-input">
+                    <div class="input">
+                        <label for="first">first</label>
+                        <input type="text" id="first">
+                    </div>
+                    <div class="input">
+                        <label for="last">last</label>
+                        <input type="text" id="last">
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="username">user</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="input">
+                    <label for="email">email</label>
+                    <input type="password" id="email">
+                </div>
+                <div class="input">
+                    <label for="password">password</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="password">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<!-- <script>
+    let tabs = document.querySelectorAll('.tab');
+    let forms = document.querySelectorAll('.form-div');
+    const removeActiveTab = () => {
+        tabs.forEach(tab => tab.classList.remove('active'));
+    };
+    const removeActiveForm = () => {
+        forms.forEach(form => form.classList.remove('current'));
+    }
+    function
+    function setActiveTab(tab) {
+        if(!tab.classList.contains('active')) {
+            removeActiveTab();
+            tab.classList.add("active");
+        }
+    }
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            setActiveTab(tab);
+        });
+    });
+</script> -->
+</html>

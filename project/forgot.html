@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="forgot.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Bootstrap Login</title>
+    </head>
+    <body>
+        <form action="reset.html">
+        <div class="box">
+            <div class="row">
+                <img src="logo-02.svg">
+                <h2>Forgot</h2>
+                <div class="inputBox">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <input type="text" name="umail"required>
+                    <label>E-Mail</label>
+                   </div>
+               <div class="inputBox">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" id="pwd" required="" >
+                    <label>Password</label>
+                    <i  class="fa fa-eye" id="eye" ></i>
+               </div>
+            </div>
+               <input type="submit" name="" value="submit">
+        </div>
+        </form>
+        <script>
+            var pwd = document.getElementById('pwd');
+            var eye = document.getElementById('eye');
+ 
+            eye.addEventListener('click',toggePass);
+ 
+            function toggePass(){
+                eye.classList.toggle('active');
+ 
+                (pwd.type == 'password') ? pwd.type = 'text' :
+                pwd.type = 'password';
+             }
+         </script>
+    </body>
+    </html>
